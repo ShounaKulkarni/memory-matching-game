@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
+import ChatApp from './components/ChatApp'; // Import the ChatApp component.
+
 
 const cardImages = [
   { "src": "/img/pickachu.png" , matched: false },
@@ -87,8 +89,15 @@ function App() {
         ))}
         </div>
         <p>Turns: {turns}</p>
+        <div className="App">
+      <header className="App-header">
+        <h1>My Chat App</h1>
+      </header>
+      <main>
+        <ChatApp /> {/* Render the ChatApp component here. */}
+      </main>
+    </div>
       </div>
-    //</div>
   );
 }
 
