@@ -89,7 +89,7 @@ function App() {
         <p>Turns: {turns}</p>
         <div className="App">
       <header className="App-header">
-        <h1>My Chat App</h1>
+        <h2>Community Chat</h2>
       </header>
       <main>
         <ChatApp /> {/* Render the ChatApp component here. */}
