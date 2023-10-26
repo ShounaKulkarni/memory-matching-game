@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function ChatInput({ onSendMessage }) {
   const [name, setName] = useState('');
@@ -12,9 +13,17 @@ function ChatInput({ onSendMessage }) {
     setMessage(e.target.value);
   };
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (name.trim() !== '' && message.trim() !== '') {
-      onSendMessage(`${name}: ${message}`);
+      const newMessage = `${name}: ${message}`;
+      onSendMessage(newMessage);
+
+      try {
+        await axios.post('/api/messages', { message: newMessage });
+      } catch (error) {
+        console.error('Error adding message:', error);
+      }
+
       setMessage('');
     }
   };

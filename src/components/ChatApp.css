@@ -11,9 +11,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 80vh;
     background-color: #f2f2f2;
-    /* Add background color */
     margin: 0;
     padding: 0;
 }
@@ -25,21 +24,18 @@ body {
     width: 400px;
     padding: 20px;
     margin-top: 20px;
-    /* Adjust margin for spacing */
 }
 
 .chat-messages {
-    height: 300px;
-    width: 450px;
+    height: 50vh;
+    width: 80vh;
     overflow-y: scroll;
     border: 1px solid #cccccc;
     padding: 10px;
     border-radius: 5px;
     background-color: #3463f3;
-    /* Add background color */
-    /* margin-top: 20px; */
+    margin-top: 20px;
     margin-bottom: 35px;
-    /* Adjust margin for spacing */
 }
 
 .message-box {
@@ -47,34 +43,25 @@ body {
     padding: 8px;
     border-radius: 5px;
     margin: 10px 0;
-    /* Adjust margin for spacing */
     max-width: 80%;
-    /* Set a fixed maximum width for the message box */
 }
 
 input[type="text"] {
     flex: 1;
     padding: 10px;
-    /* Increase input padding for better styling */
     border: 2px solid #007bff;
-    /* Improve input border styling */
     border-radius: 5px;
     font-size: 14px;
-    /* Adjust font size */
     margin-right: 10px;
-    /* Add right margin for spacing */
     outline: none;
-    /* Remove input outline */
 }
 
 button {
     padding: 10px 20px;
-    /* Increase button padding for better styling */
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    /* Adjust button font size */
 }
