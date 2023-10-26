@@ -1,8 +1,19 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
-import ChatApp from './components/ChatApp'; // Import the ChatApp component.
+import ChatApp from './components/ChatApp';
 
+
+/*
+const cardImages = [
+  { "src": "/img/helmet-1.png"},
+  {"src": "/img/potion-1.png"},
+  { "src":"/img/ring-1.png"},
+  {"src" :"/img/scroll-1.png"},
+  {"src" :"/img/shield-1.png"},
+  {"src": "/img/sword-1.png"}
+]
+*/
 
 const cardImages = [
   { "src": "/img/coffee.png", matched: false},
@@ -92,7 +103,7 @@ function App() {
         <h2>Community Chat</h2>
       </header>
       <main>
-        <ChatApp /> {/* Render the ChatApp component here. */}
+        <ChatApp />
       </main>
     </div>
       </div>
