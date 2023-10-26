@@ -1,16 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
-/*
-const cardImages = [
-  { "src": "/img/helmet-1.png"},
-  {"src": "/img/potion-1.png"},
-  { "src":"/img/ring-1.png"},
-  {"src" :"/img/scroll-1.png"},
-  {"src" :"/img/shield-1.png"},
-  {"src": "/img/sword-1.png"}
-]
-*/
+import ChatApp from './components/ChatApp'; // Import the ChatApp component.
+
 
 const cardImages = [
   { "src": "/img/coffee.png", matched: false},
@@ -92,10 +84,18 @@ function App() {
           flipped={ card === choiceOne || card === choiceTwo || card.matched}
           disabled={disabled}
           />
-      ))}
+        ))}
+        </div>
+        <p>Turns: {turns}</p>
+        <div className="App">
+      <header className="App-header">
+        <h1>My Chat App</h1>
+      </header>
+      <main>
+        <ChatApp /> {/* Render the ChatApp component here. */}
+      </main>
     </div>
-    <p> Turns: {turns}</p>
-    </div>
+      </div>
   );
 }
 
