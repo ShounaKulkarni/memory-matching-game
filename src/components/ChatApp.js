@@ -10,7 +10,7 @@ function ChatApp() {
   useEffect(() => {
     async function fetchMessages() {
       try {
-        const response = await axios.get('http://localhost:3000/api/messages');
+        const response = await axios.get('https://match-making-game-766cb3f24122.herokuapp.com/api/messages');
         setMessages(response.data);
       } catch (error) {
         console.error('Error fetching messages:', error);
@@ -26,7 +26,7 @@ function ChatApp() {
 
   const deleteMessages = async () => {
     try {
-      await axios.delete('http://localhost:3000/api/messages'); 
+      await axios.delete('https://match-making-game-766cb3f24122.herokuapp.com/api/messages'); 
       setMessages([]);
       console.log('All messages deleted');
     } catch (error) {
@@ -39,7 +39,7 @@ function ChatApp() {
       const formData = new URLSearchParams();
       formData.append('message', newMessage);
   
-      await axios.post('http://localhost:3000/api/messages', formData, {
+      await axios.post('https://match-making-game-766cb3f24122.herokuapp.com/api/messages', formData, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
