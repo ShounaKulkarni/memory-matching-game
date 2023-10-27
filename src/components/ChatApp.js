@@ -8,7 +8,6 @@ function ChatApp() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    // Fetch messages from the API when the component mounts
     async function fetchMessages() {
       try {
         const response = await axios.get('http://localhost:3000/api/messages');
